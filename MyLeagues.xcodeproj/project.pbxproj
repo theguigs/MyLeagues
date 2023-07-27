@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D416AC312A731BD100372D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC302A731BD100372D7E /* AppDelegate.swift */; };
-		D416AC332A731BD100372D7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC322A731BD100372D7E /* SceneDelegate.swift */; };
 		D416AC352A731BD100372D7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC342A731BD100372D7E /* ViewController.swift */; };
-		D416AC382A731BD100372D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D416AC362A731BD100372D7E /* Main.storyboard */; };
 		D416AC3A2A731BD200372D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D416AC392A731BD200372D7E /* Assets.xcassets */; };
 		D416AC3D2A731BD200372D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */; };
 		D416AC482A731BD200372D7E /* MyLeaguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC472A731BD200372D7E /* MyLeaguesTests.swift */; };
@@ -38,9 +36,7 @@
 /* Begin PBXFileReference section */
 		D416AC2D2A731BD100372D7E /* MyLeagues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLeagues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D416AC302A731BD100372D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D416AC322A731BD100372D7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D416AC342A731BD100372D7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D416AC372A731BD100372D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D416AC392A731BD200372D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D416AC3C2A731BD200372D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D416AC3E2A731BD200372D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,12 +95,10 @@
 		D416AC2F2A731BD100372D7E /* MyLeagues */ = {
 			isa = PBXGroup;
 			children = (
-				D416AC302A731BD100372D7E /* AppDelegate.swift */,
-				D416AC322A731BD100372D7E /* SceneDelegate.swift */,
-				D416AC342A731BD100372D7E /* ViewController.swift */,
-				D416AC362A731BD100372D7E /* Main.storyboard */,
-				D416AC392A731BD200372D7E /* Assets.xcassets */,
-				D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */,
+				D416AC602A731C1800372D7E /* Application */,
+				D416AC612A731C2E00372D7E /* ViewControllers */,
+				D416AC622A731C3C00372D7E /* Views */,
+				D416AC632A731C5000372D7E /* Resources */,
 				D416AC3E2A731BD200372D7E /* Info.plist */,
 			);
 			path = MyLeagues;
@@ -125,6 +119,38 @@
 				D416AC532A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift */,
 			);
 			path = MyLeaguesUITests;
+			sourceTree = "<group>";
+		};
+		D416AC602A731C1800372D7E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D416AC302A731BD100372D7E /* AppDelegate.swift */,
+				D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D416AC612A731C2E00372D7E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D416AC342A731BD100372D7E /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D416AC622A731C3C00372D7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D416AC632A731C5000372D7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D416AC392A731BD200372D7E /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +259,6 @@
 			files = (
 				D416AC3D2A731BD200372D7E /* LaunchScreen.storyboard in Resources */,
 				D416AC3A2A731BD200372D7E /* Assets.xcassets in Resources */,
-				D416AC382A731BD100372D7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +285,6 @@
 			files = (
 				D416AC352A731BD100372D7E /* ViewController.swift in Sources */,
 				D416AC312A731BD100372D7E /* AppDelegate.swift in Sources */,
-				D416AC332A731BD100372D7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D416AC362A731BD100372D7E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D416AC372A731BD100372D7E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +458,7 @@
 				INFOPLIST_FILE = MyLeagues/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +484,7 @@
 				INFOPLIST_FILE = MyLeagues/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
