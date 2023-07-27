@@ -38,6 +38,11 @@ class LeagueSearchViewController: EnginedViewController {
     }
     
     private func configureTextField() {
+        let searchIcon = UIImage(systemName: "magnifyingglass")
+        let searchIconImageView = UIImageView(image: searchIcon)
+        searchTextField.leftView = searchIconImageView
+        searchTextField.leftViewMode = .always
+
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidEditingChanged), for: .editingChanged)
     }
