@@ -7,15 +7,32 @@
 
 import UIKit
 
+// TODO :
+// - Unit Tests
+// - Add Loading HUD
+// - Add Cache into Services
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var engine: Engine?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        guard let stringURL = Bundle.main.object(forInfoDictionaryKey: "base_url") as? String,
+              let baseURL = URL(string: stringURL) else {
+            fatalError("Base URL is not a valid URL")
+        }
+
         window = UIWindow()
 
-        let rootViewController = ViewController()
+        let network = EngineConfiguration.Network(baseUrl: baseURL)
+        let configuration = EngineConfiguration(network: network)
+        
+        let engine = Engine(configuration: configuration)
+        self.engine = engine
+
+        let rootViewController = LeagueSearchViewController(engine: engine)
         let navController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
