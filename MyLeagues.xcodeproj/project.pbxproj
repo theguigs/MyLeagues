@@ -11,8 +11,6 @@
 		D416AC3A2A731BD200372D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D416AC392A731BD200372D7E /* Assets.xcassets */; };
 		D416AC3D2A731BD200372D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */; };
 		D416AC482A731BD200372D7E /* MyLeaguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC472A731BD200372D7E /* MyLeaguesTests.swift */; };
-		D416AC522A731BD200372D7E /* MyLeaguesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC512A731BD200372D7E /* MyLeaguesUITests.swift */; };
-		D416AC542A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC532A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift */; };
 		D416AC862A73213A00372D7E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC802A73213900372D7E /* NetworkClient.swift */; };
 		D416AC872A73213A00372D7E /* AsyncCacheHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC822A73213900372D7E /* AsyncCacheHandling.swift */; };
 		D416AC882A73213A00372D7E /* ExpirableFileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC832A73213900372D7E /* ExpirableFileDataStore.swift */; };
@@ -67,13 +65,6 @@
 			remoteGlobalIDString = D416AC2C2A731BD100372D7E;
 			remoteInfo = MyLeagues;
 		};
-		D416AC4E2A731BD200372D7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D416AC252A731BD100372D7E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D416AC2C2A731BD100372D7E;
-			remoteInfo = MyLeagues;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -84,9 +75,6 @@
 		D416AC3E2A731BD200372D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D416AC432A731BD200372D7E /* MyLeaguesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLeaguesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D416AC472A731BD200372D7E /* MyLeaguesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLeaguesTests.swift; sourceTree = "<group>"; };
-		D416AC4D2A731BD200372D7E /* MyLeaguesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLeaguesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D416AC512A731BD200372D7E /* MyLeaguesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLeaguesUITests.swift; sourceTree = "<group>"; };
-		D416AC532A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLeaguesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D416AC802A73213900372D7E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D416AC822A73213900372D7E /* AsyncCacheHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncCacheHandling.swift; sourceTree = "<group>"; };
 		D416AC832A73213900372D7E /* ExpirableFileDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirableFileDataStore.swift; sourceTree = "<group>"; };
@@ -148,13 +136,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D416AC4A2A731BD200372D7E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,7 +144,6 @@
 			children = (
 				D416AC2F2A731BD100372D7E /* MyLeagues */,
 				D416AC462A731BD200372D7E /* MyLeaguesTests */,
-				D416AC502A731BD200372D7E /* MyLeaguesUITests */,
 				D416AC2E2A731BD100372D7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,7 +153,6 @@
 			children = (
 				D416AC2D2A731BD100372D7E /* MyLeagues.app */,
 				D416AC432A731BD200372D7E /* MyLeaguesTests.xctest */,
-				D416AC4D2A731BD200372D7E /* MyLeaguesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,15 +177,6 @@
 				D416AC472A731BD200372D7E /* MyLeaguesTests.swift */,
 			);
 			path = MyLeaguesTests;
-			sourceTree = "<group>";
-		};
-		D416AC502A731BD200372D7E /* MyLeaguesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D416AC512A731BD200372D7E /* MyLeaguesUITests.swift */,
-				D416AC532A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift */,
-			);
-			path = MyLeaguesUITests;
 			sourceTree = "<group>";
 		};
 		D416AC602A731C1800372D7E /* Application */ = {
@@ -482,24 +452,6 @@
 			productReference = D416AC432A731BD200372D7E /* MyLeaguesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D416AC4C2A731BD200372D7E /* MyLeaguesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D416AC5D2A731BD200372D7E /* Build configuration list for PBXNativeTarget "MyLeaguesUITests" */;
-			buildPhases = (
-				D416AC492A731BD200372D7E /* Sources */,
-				D416AC4A2A731BD200372D7E /* Frameworks */,
-				D416AC4B2A731BD200372D7E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D416AC4F2A731BD200372D7E /* PBXTargetDependency */,
-			);
-			name = MyLeaguesUITests;
-			productName = MyLeaguesUITests;
-			productReference = D416AC4D2A731BD200372D7E /* MyLeaguesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -514,10 +466,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					D416AC422A731BD200372D7E = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = D416AC2C2A731BD100372D7E;
-					};
-					D416AC4C2A731BD200372D7E = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = D416AC2C2A731BD100372D7E;
 					};
@@ -542,7 +490,6 @@
 			targets = (
 				D416AC2C2A731BD100372D7E /* MyLeagues */,
 				D416AC422A731BD200372D7E /* MyLeaguesTests */,
-				D416AC4C2A731BD200372D7E /* MyLeaguesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -561,13 +508,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D416AC412A731BD200372D7E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D416AC4B2A731BD200372D7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,15 +572,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D416AC492A731BD200372D7E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D416AC522A731BD200372D7E /* MyLeaguesUITests.swift in Sources */,
-				D416AC542A731BD200372D7E /* MyLeaguesUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -648,11 +579,6 @@
 			isa = PBXTargetDependency;
 			target = D416AC2C2A731BD100372D7E /* MyLeagues */;
 			targetProxy = D416AC442A731BD200372D7E /* PBXContainerItemProxy */;
-		};
-		D416AC4F2A731BD200372D7E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D416AC2C2A731BD100372D7E /* MyLeagues */;
-			targetProxy = D416AC4E2A731BD200372D7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -874,42 +800,6 @@
 			};
 			name = Release;
 		};
-		D416AC5E2A731BD200372D7E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A4W8YB84DU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaudinet.MyLeaguesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyLeagues;
-			};
-			name = Debug;
-		};
-		D416AC5F2A731BD200372D7E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A4W8YB84DU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaudinet.MyLeaguesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyLeagues;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,15 +826,6 @@
 			buildConfigurations = (
 				D416AC5B2A731BD200372D7E /* Debug */,
 				D416AC5C2A731BD200372D7E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D416AC5D2A731BD200372D7E /* Build configuration list for PBXNativeTarget "MyLeaguesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D416AC5E2A731BD200372D7E /* Debug */,
-				D416AC5F2A731BD200372D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
