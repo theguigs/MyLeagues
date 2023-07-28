@@ -24,10 +24,25 @@ class LeagueViewModel {
                 return
             }
             
-            self.teams = teams ?? []
+            let sortedTeams = sortTeamsByAntiAlphabeticalOrder(teams)
+            let computedTeams = removeUnevenTeams(sortedTeams)
+            self.teams = computedTeams
             
             completion()
         }
+    }
+    
+    private func sortTeamsByAntiAlphabeticalOrder(_ teams: [Team]?) -> [Team] {
+        guard let teams else { return [] }
+        return teams.sorted { $0.strTeam > $1.strTeam }
+    }
+
+    private func removeUnevenTeams(_ teams: [Team]?) -> [Team] {
+        guard let teams else { return [] }
+        return teams
+            .enumerated()
+            .filter { $0.offset % 2 == 0 }
+            .compactMap { $0.element }
     }
 
 }
