@@ -30,7 +30,10 @@ class LeagueSearchViewController: EnginedViewController {
     }
     
     private func fetchAllLeagues() {
+        LoadingHUD.showDefaultLoader()
         leagueSearchViewModel.fetchAllLeagues() { [weak self] in
+            LoadingHUD.hide()
+            
             guard let self else { return }
             
             self.tableView.reloadData()

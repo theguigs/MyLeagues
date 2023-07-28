@@ -38,7 +38,10 @@ class LeagueViewController: EnginedViewController {
     }
 
     private func fetchAllTeams() {
+        LoadingHUD.showDefaultLoader()
         leagueViewModel.fetchAllTeams(for: league) { [weak self] in
+            LoadingHUD.hide()
+
             guard let self else { return }
             
             self.collectionView.reloadData()

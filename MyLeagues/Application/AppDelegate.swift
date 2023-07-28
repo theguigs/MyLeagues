@@ -11,7 +11,8 @@ import UIKit
 // - Unit Tests
 // - Add Loading HUD
 // - Add Cache into Services
-
+// - Point nº5 des Consignes (Ordre alpha + 1 équipe sur 2)
+// - Clean fichiers non utilisés / Vérifier naming fichiers
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

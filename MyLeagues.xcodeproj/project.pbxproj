@@ -50,6 +50,13 @@
 		D416ACE52A7333E400372D7E /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACE32A7333E400372D7E /* TeamCollectionViewCell.swift */; };
 		D416ACE62A7333E400372D7E /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D416ACE42A7333E400372D7E /* TeamCollectionViewCell.xib */; };
 		D416ACE92A73345200372D7E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D416ACE82A73345200372D7E /* Kingfisher */; };
+		D416ACEC2A73FE2C00372D7E /* LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACEB2A73FE2C00372D7E /* LoadingHUD.swift */; };
+		D416ACEF2A73FE5700372D7E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACEE2A73FE5700372D7E /* LoadingView.swift */; };
+		D416ACF22A73FE6E00372D7E /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D416ACF12A73FE6E00372D7E /* ActivityIndicatorView */; };
+		D416ACF42A73FEA100372D7E /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF32A73FEA100372D7E /* With.swift */; };
+		D416ACF62A73FEC600372D7E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */; };
+		D416ACF82A73FF0700372D7E /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF72A73FF0700372D7E /* StyleSheet.swift */; };
+		D416ACFB2A73FF9200372D7E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACFA2A73FF9200372D7E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +123,12 @@
 		D416ACE02A7331F000372D7E /* TeamsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsResponse.swift; sourceTree = "<group>"; };
 		D416ACE32A7333E400372D7E /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		D416ACE42A7333E400372D7E /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		D416ACEB2A73FE2C00372D7E /* LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHUD.swift; sourceTree = "<group>"; };
+		D416ACEE2A73FE5700372D7E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D416ACF32A73FEA100372D7E /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D416ACF72A73FF0700372D7E /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		D416ACFA2A73FF9200372D7E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D416ACF22A73FE6E00372D7E /* ActivityIndicatorView in Frameworks */,
 				D416ACE92A73345200372D7E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +231,7 @@
 		D416AC622A731C3C00372D7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D416ACEA2A73FE2100372D7E /* Common */,
 				D416ACE22A7333D700372D7E /* Team */,
 			);
 			path = Views;
@@ -278,6 +293,9 @@
 				D416AC8F2A73214400372D7E /* Constants.swift */,
 				D416AC902A73214400372D7E /* Logger.swift */,
 				D416AC9A2A73214400372D7E /* Debouncer.swift */,
+				D416ACF32A73FEA100372D7E /* With.swift */,
+				D416ACF72A73FF0700372D7E /* StyleSheet.swift */,
+				D416ACFA2A73FF9200372D7E /* File.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -293,6 +311,7 @@
 				D416AC972A73214400372D7E /* Date+Extensions.swift */,
 				D416AC982A73214400372D7E /* Data+Extensions.swift */,
 				D416AC992A73214400372D7E /* Double+Extensions.swift */,
+				D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,6 +423,23 @@
 			path = Team;
 			sourceTree = "<group>";
 		};
+		D416ACEA2A73FE2100372D7E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D416ACED2A73FE4E00372D7E /* Loading */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D416ACED2A73FE4E00372D7E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				D416ACEB2A73FE2C00372D7E /* LoadingHUD.swift */,
+				D416ACEE2A73FE5700372D7E /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +458,7 @@
 			name = MyLeagues;
 			packageProductDependencies = (
 				D416ACE82A73345200372D7E /* Kingfisher */,
+				D416ACF12A73FE6E00372D7E /* ActivityIndicatorView */,
 			);
 			productName = MyLeagues;
 			productReference = D416AC2D2A731BD100372D7E /* MyLeagues.app */;
@@ -497,6 +534,7 @@
 			mainGroup = D416AC242A731BD100372D7E;
 			packageReferences = (
 				D416ACE72A73345200372D7E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D416ACF02A73FE6E00372D7E /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 			);
 			productRefGroup = D416AC2E2A731BD100372D7E /* Products */;
 			projectDirPath = "";
@@ -545,8 +583,10 @@
 			files = (
 				D416ACB02A73214400372D7E /* Formatters+Extensions.swift in Sources */,
 				D416ACB92A73214400372D7E /* LeagueEndpoints.swift in Sources */,
+				D416ACF42A73FEA100372D7E /* With.swift in Sources */,
 				D416ACC42A73237500372D7E /* Team.swift in Sources */,
 				D416AC8A2A73213A00372D7E /* Endpoint.swift in Sources */,
+				D416ACFB2A73FF9200372D7E /* File.swift in Sources */,
 				D416ACAD2A73214400372D7E /* Logger.swift in Sources */,
 				D416ACB42A73214400372D7E /* Data+Extensions.swift in Sources */,
 				D416AC312A731BD100372D7E /* AppDelegate.swift in Sources */,
@@ -554,17 +594,21 @@
 				D416ACDD2A73300F00372D7E /* TeamEndpoints.swift in Sources */,
 				D416AC872A73213A00372D7E /* AsyncCacheHandling.swift in Sources */,
 				D416ACC72A7324DA00372D7E /* AllLeaguesResponse.swift in Sources */,
+				D416ACF62A73FEC600372D7E /* UIView+Extensions.swift in Sources */,
 				D416ACB22A73214400372D7E /* Number+Extensions.swift in Sources */,
 				D416ACB82A73214400372D7E /* LeagueService.swift in Sources */,
 				D416ACD32A73272800372D7E /* LeagueSearchViewModel.swift in Sources */,
+				D416ACEC2A73FE2C00372D7E /* LoadingHUD.swift in Sources */,
 				D416ACD72A732EC800372D7E /* LeagueViewController.swift in Sources */,
 				D416AC892A73213A00372D7E /* FileDataStore.swift in Sources */,
+				D416ACEF2A73FE5700372D7E /* LoadingView.swift in Sources */,
 				D416ACB32A73214400372D7E /* Date+Extensions.swift in Sources */,
 				D416ACE52A7333E400372D7E /* TeamCollectionViewCell.swift in Sources */,
 				D416ACB12A73214400372D7E /* TimeInterval+Extensions.swift in Sources */,
 				D416ACCF2A73262100372D7E /* EnginedViewController.swift in Sources */,
 				D416ACAC2A73214400372D7E /* Constants.swift in Sources */,
 				D416ACAA2A73214400372D7E /* Engine.swift in Sources */,
+				D416ACF82A73FF0700372D7E /* StyleSheet.swift in Sources */,
 				D416ACB62A73214400372D7E /* Debouncer.swift in Sources */,
 				D416ACB52A73214400372D7E /* Double+Extensions.swift in Sources */,
 				D416ACC22A73233D00372D7E /* League.swift in Sources */,
@@ -916,6 +960,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		D416ACF02A73FE6E00372D7E /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -923,6 +975,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D416ACE72A73345200372D7E /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		D416ACF12A73FE6E00372D7E /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D416ACF02A73FE6E00372D7E /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
