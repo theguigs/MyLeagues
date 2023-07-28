@@ -18,16 +18,12 @@
 		D416AC8A2A73213A00372D7E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC852A73213900372D7E /* Endpoint.swift */; };
 		D416ACAA2A73214400372D7E /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC8C2A73214400372D7E /* Engine.swift */; };
 		D416ACAB2A73214400372D7E /* EngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC8D2A73214400372D7E /* EngineConfiguration.swift */; };
-		D416ACAC2A73214400372D7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC8F2A73214400372D7E /* Constants.swift */; };
 		D416ACAD2A73214400372D7E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC902A73214400372D7E /* Logger.swift */; };
 		D416ACAE2A73214400372D7E /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC922A73214400372D7E /* URLRequest+Extensions.swift */; };
 		D416ACAF2A73214400372D7E /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC932A73214400372D7E /* JSONDecoder+Extensions.swift */; };
 		D416ACB02A73214400372D7E /* Formatters+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC942A73214400372D7E /* Formatters+Extensions.swift */; };
 		D416ACB12A73214400372D7E /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC952A73214400372D7E /* TimeInterval+Extensions.swift */; };
-		D416ACB22A73214400372D7E /* Number+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC962A73214400372D7E /* Number+Extensions.swift */; };
-		D416ACB32A73214400372D7E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC972A73214400372D7E /* Date+Extensions.swift */; };
 		D416ACB42A73214400372D7E /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC982A73214400372D7E /* Data+Extensions.swift */; };
-		D416ACB52A73214400372D7E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC992A73214400372D7E /* Double+Extensions.swift */; };
 		D416ACB62A73214400372D7E /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC9A2A73214400372D7E /* Debouncer.swift */; };
 		D416ACB82A73214400372D7E /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC9D2A73214400372D7E /* LeagueService.swift */; };
 		D416ACB92A73214400372D7E /* LeagueEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACA02A73214400372D7E /* LeagueEndpoints.swift */; };
@@ -54,7 +50,7 @@
 		D416ACF42A73FEA100372D7E /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF32A73FEA100372D7E /* With.swift */; };
 		D416ACF62A73FEC600372D7E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */; };
 		D416ACF82A73FF0700372D7E /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF72A73FF0700372D7E /* StyleSheet.swift */; };
-		D416ACFB2A73FF9200372D7E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACFA2A73FF9200372D7E /* File.swift */; };
+		D416ACFB2A73FF9200372D7E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACFA2A73FF9200372D7E /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,16 +78,12 @@
 		D416AC852A73213900372D7E /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D416AC8C2A73214400372D7E /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		D416AC8D2A73214400372D7E /* EngineConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineConfiguration.swift; sourceTree = "<group>"; };
-		D416AC8F2A73214400372D7E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D416AC902A73214400372D7E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D416AC922A73214400372D7E /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D416AC932A73214400372D7E /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		D416AC942A73214400372D7E /* Formatters+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatters+Extensions.swift"; sourceTree = "<group>"; };
 		D416AC952A73214400372D7E /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
-		D416AC962A73214400372D7E /* Number+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Extensions.swift"; sourceTree = "<group>"; };
-		D416AC972A73214400372D7E /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D416AC982A73214400372D7E /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
-		D416AC992A73214400372D7E /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		D416AC9A2A73214400372D7E /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		D416AC9D2A73214400372D7E /* LeagueService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
 		D416ACA02A73214400372D7E /* LeagueEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueEndpoints.swift; sourceTree = "<group>"; };
@@ -116,7 +108,7 @@
 		D416ACF32A73FEA100372D7E /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D416ACF72A73FF0700372D7E /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
-		D416ACFA2A73FF9200372D7E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D416ACFA2A73FF9200372D7E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,12 +252,11 @@
 			isa = PBXGroup;
 			children = (
 				D416AC912A73214400372D7E /* Extensions */,
-				D416AC8F2A73214400372D7E /* Constants.swift */,
 				D416AC902A73214400372D7E /* Logger.swift */,
 				D416AC9A2A73214400372D7E /* Debouncer.swift */,
 				D416ACF32A73FEA100372D7E /* With.swift */,
 				D416ACF72A73FF0700372D7E /* StyleSheet.swift */,
-				D416ACFA2A73FF9200372D7E /* File.swift */,
+				D416ACFA2A73FF9200372D7E /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -277,10 +268,7 @@
 				D416AC932A73214400372D7E /* JSONDecoder+Extensions.swift */,
 				D416AC942A73214400372D7E /* Formatters+Extensions.swift */,
 				D416AC952A73214400372D7E /* TimeInterval+Extensions.swift */,
-				D416AC962A73214400372D7E /* Number+Extensions.swift */,
-				D416AC972A73214400372D7E /* Date+Extensions.swift */,
 				D416AC982A73214400372D7E /* Data+Extensions.swift */,
-				D416AC992A73214400372D7E /* Double+Extensions.swift */,
 				D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
@@ -526,7 +514,7 @@
 				D416ACF42A73FEA100372D7E /* With.swift in Sources */,
 				D416ACC42A73237500372D7E /* Team.swift in Sources */,
 				D416AC8A2A73213A00372D7E /* Endpoint.swift in Sources */,
-				D416ACFB2A73FF9200372D7E /* File.swift in Sources */,
+				D416ACFB2A73FF9200372D7E /* Colors.swift in Sources */,
 				D416ACAD2A73214400372D7E /* Logger.swift in Sources */,
 				D416ACB42A73214400372D7E /* Data+Extensions.swift in Sources */,
 				D416AC312A731BD100372D7E /* AppDelegate.swift in Sources */,
@@ -535,22 +523,18 @@
 				D416AC872A73213A00372D7E /* AsyncCacheHandling.swift in Sources */,
 				D416ACC72A7324DA00372D7E /* AllLeaguesResponse.swift in Sources */,
 				D416ACF62A73FEC600372D7E /* UIView+Extensions.swift in Sources */,
-				D416ACB22A73214400372D7E /* Number+Extensions.swift in Sources */,
 				D416ACB82A73214400372D7E /* LeagueService.swift in Sources */,
 				D416ACD32A73272800372D7E /* LeagueSearchViewModel.swift in Sources */,
 				D416ACEC2A73FE2C00372D7E /* LoadingHUD.swift in Sources */,
 				D416ACD72A732EC800372D7E /* LeagueViewController.swift in Sources */,
 				D416AC892A73213A00372D7E /* FileDataStore.swift in Sources */,
 				D416ACEF2A73FE5700372D7E /* LoadingView.swift in Sources */,
-				D416ACB32A73214400372D7E /* Date+Extensions.swift in Sources */,
 				D416ACE52A7333E400372D7E /* TeamCollectionViewCell.swift in Sources */,
 				D416ACB12A73214400372D7E /* TimeInterval+Extensions.swift in Sources */,
 				D416ACCF2A73262100372D7E /* EnginedViewController.swift in Sources */,
-				D416ACAC2A73214400372D7E /* Constants.swift in Sources */,
 				D416ACAA2A73214400372D7E /* Engine.swift in Sources */,
 				D416ACF82A73FF0700372D7E /* StyleSheet.swift in Sources */,
 				D416ACB62A73214400372D7E /* Debouncer.swift in Sources */,
-				D416ACB52A73214400372D7E /* Double+Extensions.swift in Sources */,
 				D416ACC22A73233D00372D7E /* League.swift in Sources */,
 				D416ACE12A7331F000372D7E /* TeamsResponse.swift in Sources */,
 				D416AC882A73213A00372D7E /* ExpirableFileDataStore.swift in Sources */,

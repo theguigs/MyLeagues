@@ -9,8 +9,7 @@ import UIKit
 
 // TODO :
 // - Unit Tests
-// - Add Cache into Services
-// - Clean fichiers non utilisés / Vérifier naming fichiers
+// - Manage error into service
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
