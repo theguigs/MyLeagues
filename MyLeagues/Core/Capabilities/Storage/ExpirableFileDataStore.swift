@@ -1,6 +1,6 @@
 //
 //  ExpirableFileDataStore.swift
-//  Engine
+//  MyLeagues
 //
 //  Created by Guillaume Audinet on 28/07/2023.
 //
@@ -12,7 +12,7 @@ public class ExpirableFileDataStore {
 
     static let kExpirationTimeForPathsFilename = "cacheValidity"
 
-    let expirableTableQueue = DispatchQueue(label: "com.gaudinet.MySuperWeather.expirableFileDataStore")
+    let expirableTableQueue = DispatchQueue(label: "com.gaudinet.MyLeagues.expirableFileDataStore")
 
     let dataStore: FileDataStore
     var updatedTimeForPaths: [String: Date] {

@@ -1,6 +1,6 @@
 //
-//  Engine.swift
-//  Engine
+//  MyLeagues.swift
+//  MyLeagues
 //
 //  Created by Guillaume Audinet on 28/07/2023.
 //
@@ -19,8 +19,9 @@ class Engine {
         self.networkClient = NetworkClient(configuration: configuration)
         
         let fileDataStore = FileDataStore()
-        
-        self.leagueService = LeagueService(networkClient: networkClient, fileDataStore: fileDataStore)
+        let expirableDataStore = ExpirableFileDataStore(dataStore: fileDataStore)
+
+        self.leagueService = LeagueService(networkClient: networkClient, expirableDataStore: expirableDataStore)
         self.teamService = TeamService(networkClient: networkClient, fileDataStore: fileDataStore)
     }
 }

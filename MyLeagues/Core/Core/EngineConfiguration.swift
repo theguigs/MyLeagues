@@ -1,6 +1,6 @@
 //
-//  EngineConfiguration.swift
-//  Engine
+//  MyLeaguesConfiguration.swift
+//  MyLeagues
 //
 //  Created by Guillaume Audinet on 28/07/2023.
 //

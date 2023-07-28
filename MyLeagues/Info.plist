@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>base_url</key>
-	<string>https://www.thesportsdb.com/api/v1/json/50130162/</string>
+	<string>https://www.thesportsdb.com/api/v1/json/50130162</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
