@@ -5,12 +5,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeagueViewController" customModule="MyLeagues" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="jQU-gT-jdq" id="4sU-ij-C4B"/>
+                <outlet property="errorContainer" destination="N5E-oU-xAk" id="puY-9a-5lH"/>
+                <outlet property="errorLabel" destination="m13-B1-i4h" id="N6Q-St-GeI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,14 +32,49 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5E-oU-xAk">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Sq-bs-0MD">
+                            <rect key="frame" x="20" y="375.66666666666669" width="353" height="66.666666666666686"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m13-B1-i4h">
+                                    <rect key="frame" x="156" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkA-Wd-GJT">
+                                    <rect key="frame" x="144.33333333333334" y="32.333333333333314" width="64.666666666666657" height="34.333333333333343"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Retry"/>
+                                    <connections>
+                                        <action selector="retryButtonDidTouchUpInside:" destination="-1" eventType="touchUpInside" id="XAw-Ha-4KX"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="1Sq-bs-0MD" firstAttribute="centerX" secondItem="N5E-oU-xAk" secondAttribute="centerX" id="2OG-8b-g48"/>
+                        <constraint firstItem="1Sq-bs-0MD" firstAttribute="leading" secondItem="N5E-oU-xAk" secondAttribute="leading" constant="20" id="J4M-6f-zyA"/>
+                        <constraint firstAttribute="trailing" secondItem="1Sq-bs-0MD" secondAttribute="trailing" constant="20" id="bvw-Lv-9jg"/>
+                        <constraint firstItem="1Sq-bs-0MD" firstAttribute="centerY" secondItem="N5E-oU-xAk" secondAttribute="centerY" id="cKV-mJ-l2D"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="gray6"/>
             <constraints>
+                <constraint firstItem="N5E-oU-xAk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2hV-xQ-vFE"/>
+                <constraint firstItem="N5E-oU-xAk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HN2-oR-vvZ"/>
+                <constraint firstItem="N5E-oU-xAk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MTR-2N-hQo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jQU-gT-jdq" secondAttribute="bottom" id="RDT-DF-lwU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jQU-gT-jdq" secondAttribute="trailing" constant="16" id="RVW-jM-SYV"/>
                 <constraint firstItem="jQU-gT-jdq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RXW-tx-rVh"/>
                 <constraint firstItem="jQU-gT-jdq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="T9n-fG-4Ll"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="N5E-oU-xAk" secondAttribute="bottom" id="Z1s-Se-8XV"/>
             </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>
@@ -45,5 +83,8 @@
         <namedColor name="gray6">
             <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -12,6 +12,9 @@ class LeagueViewController: EnginedViewController {
     // MARK: - Outlets
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    @IBOutlet private weak var errorContainer: UIView!
+    @IBOutlet private weak var errorLabel: UILabel!
+
     // MARK: - Private property
     private lazy var leagueViewModel = LeagueViewModel(engine: engine)
     private let league: League
@@ -36,17 +39,6 @@ class LeagueViewController: EnginedViewController {
         
         fetchAllTeams()
     }
-
-    private func fetchAllTeams() {
-        LoadingHUD.showDefaultLoader()
-        leagueViewModel.fetchAllTeams(for: league) { [weak self] in
-            LoadingHUD.hide()
-
-            guard let self else { return }
-            
-            self.collectionView.reloadData()
-        }
-    }
     
     private func configureCollectionView() {
         collectionView.delegate = self
@@ -56,6 +48,30 @@ class LeagueViewController: EnginedViewController {
             UINib(nibName: TeamCollectionViewCell.kReuseIdentifier, bundle: nil),
             forCellWithReuseIdentifier: TeamCollectionViewCell.kReuseIdentifier
         )
+    }
+    
+    private func fetchAllTeams() {
+        LoadingHUD.showDefaultLoader()
+        leagueViewModel.fetchAllTeams(for: league) { [weak self] in
+            LoadingHUD.hide()
+
+            guard let self else { return }
+            
+            self.refreshGUI()
+        }
+    }
+    
+    private func refreshGUI() {
+        errorContainer.isHidden = leagueViewModel.error == nil
+        collectionView.isHidden = leagueViewModel.error != nil
+        
+        errorLabel.text = leagueViewModel.error?.localizedDescription
+        
+        collectionView.reloadData()
+    }
+    
+    @IBAction func retryButtonDidTouchUpInside(_ sender: Any) {
+        self.fetchAllTeams()
     }
 }
 

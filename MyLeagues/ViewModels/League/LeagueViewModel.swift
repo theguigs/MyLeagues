@@ -27,6 +27,7 @@ public class LeagueViewModel {
                 let sortedTeams = sortTeamsByAntiAlphabeticalOrder(teams)
                 let computedTeams = removeUnevenTeams(sortedTeams)
                 self.teams = computedTeams
+                self.error = nil
             case .failure(let error):
                 self.error = error
             }

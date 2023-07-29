@@ -29,6 +29,7 @@ class LeagueSearchViewModel {
             case .success(let leagues):
                 self.leagues = leagues
                 self.filteredLeagues = leagues
+                self.error = nil
             case .failure(let error):
                 self.error = error
             }

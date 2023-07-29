@@ -13,6 +13,9 @@ class LeagueSearchViewController: EnginedViewController {
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
 
+    @IBOutlet private weak var errorContainer: UIView!
+    @IBOutlet private weak var errorLabel: UILabel!
+
     // MARK: - Private property
     private lazy var leagueSearchViewModel = LeagueSearchViewModel(engine: engine)
     
@@ -28,18 +31,7 @@ class LeagueSearchViewController: EnginedViewController {
         
         fetchAllLeagues()
     }
-    
-    private func fetchAllLeagues() {
-        LoadingHUD.showDefaultLoader()
-        leagueSearchViewModel.fetchAllLeagues() { [weak self] in
-            LoadingHUD.hide()
-            
-            guard let self else { return }
-            
-            self.tableView.reloadData()
-        }
-    }
-    
+        
     private func configureTextField() {
         let searchIcon = UIImage(systemName: "magnifyingglass")
         let searchIconImageView = UIImageView(image: searchIcon)
@@ -53,6 +45,30 @@ class LeagueSearchViewController: EnginedViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func fetchAllLeagues() {
+        LoadingHUD.showDefaultLoader()
+        leagueSearchViewModel.fetchAllLeagues() { [weak self] in
+            LoadingHUD.hide()
+            
+            guard let self else { return }
+            
+            self.refreshGUI()
+        }
+    }
+    
+    private func refreshGUI() {
+        errorContainer.isHidden = leagueSearchViewModel.error == nil
+        tableView.isHidden = leagueSearchViewModel.error != nil
+        
+        errorLabel.text = leagueSearchViewModel.error?.localizedDescription
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func retryButtonDidTouchUpInside(_ sender: Any) {
+        self.fetchAllLeagues()
     }
 }
 

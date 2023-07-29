@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeagueSearchViewController" customModule="MyLeagues" customModuleProvider="target">
             <connections>
+                <outlet property="errorContainer" destination="MZM-lH-gsM" id="FCw-V7-jHs"/>
+                <outlet property="errorLabel" destination="bZN-Ga-UkJ" id="zST-eh-kQg"/>
                 <outlet property="searchTextField" destination="qEb-ob-wD9" id="Oos-Om-BEx"/>
                 <outlet property="tableView" destination="zlS-No-8kA" id="ynf-rF-AYO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -50,6 +52,37 @@
                         </tableView>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZM-lH-gsM">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-Lt-mhA">
+                            <rect key="frame" x="20" y="346.33333333333331" width="353" height="66.666666666666686"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-Ga-UkJ">
+                                    <rect key="frame" x="156" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOK-MM-D5A">
+                                    <rect key="frame" x="144.33333333333334" y="32.333333333333371" width="64.666666666666657" height="34.333333333333343"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Retry"/>
+                                    <connections>
+                                        <action selector="retryButtonDidTouchUpInside:" destination="-1" eventType="touchUpInside" id="Nop-Ev-O0q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Cv4-Lt-mhA" firstAttribute="centerY" secondItem="MZM-lH-gsM" secondAttribute="centerY" id="86g-hn-uH0"/>
+                        <constraint firstAttribute="trailing" secondItem="Cv4-Lt-mhA" secondAttribute="trailing" constant="20" id="KXC-Sm-a7M"/>
+                        <constraint firstItem="Cv4-Lt-mhA" firstAttribute="leading" secondItem="MZM-lH-gsM" secondAttribute="leading" constant="20" id="hZN-Ih-XAN"/>
+                        <constraint firstItem="Cv4-Lt-mhA" firstAttribute="centerX" secondItem="MZM-lH-gsM" secondAttribute="centerX" id="lbp-HR-VDf"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,7 +90,11 @@
                 <constraint firstItem="xsD-Sd-qOs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="11V-nW-SPK"/>
                 <constraint firstItem="xsD-Sd-qOs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6X7-vo-jhK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xsD-Sd-qOs" secondAttribute="bottom" id="6y3-El-gv6"/>
+                <constraint firstItem="MZM-lH-gsM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7TT-Je-oBJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MZM-lH-gsM" secondAttribute="trailing" id="NFB-EO-7En"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xsD-Sd-qOs" secondAttribute="trailing" id="gji-Yk-BFQ"/>
+                <constraint firstItem="MZM-lH-gsM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pxp-N3-3uK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MZM-lH-gsM" secondAttribute="bottom" id="v2a-bE-9pg"/>
             </constraints>
             <point key="canvasLocation" x="130" y="21"/>
         </view>
