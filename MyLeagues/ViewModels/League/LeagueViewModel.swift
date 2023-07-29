@@ -12,6 +12,8 @@ public class LeagueViewModel {
     
     var teams: [Team] = []
     
+    var error: APIError?
+
     public init(engine: Engine) {
         self.engine = engine
     }
@@ -25,12 +27,11 @@ public class LeagueViewModel {
                 let sortedTeams = sortTeamsByAntiAlphabeticalOrder(teams)
                 let computedTeams = removeUnevenTeams(sortedTeams)
                 self.teams = computedTeams
-                
-                completion()
             case .failure(let error):
-                // Manage error
-                return
+                self.error = error
             }
+            
+            completion()
         }
     }
     

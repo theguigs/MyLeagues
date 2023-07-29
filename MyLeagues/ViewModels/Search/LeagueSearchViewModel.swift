@@ -13,6 +13,8 @@ class LeagueSearchViewModel {
     var leagues: [League] = []
     var filteredLeagues: [League] = []
 
+    var error: APIError?
+    
     private let debouncer = Debouncer()
 
     init(engine: Engine) {
@@ -27,12 +29,11 @@ class LeagueSearchViewModel {
             case .success(let leagues):
                 self.leagues = leagues
                 self.filteredLeagues = leagues
-                
-                completion()
             case .failure(let error):
-                // Manage error
-                return
+                self.error = error
             }
+            
+            completion()
         }
     }
     
