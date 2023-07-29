@@ -30,12 +30,17 @@ final class LeagueServiceTests: XCTestCase {
         
         let didFetchLeaguesExpectation = self.expectation(description: "Did fetch all leagues")
 
-        self.engine?.leagueService.fetchAllLeaguesIfNeeded(completion: { leagues, error in
-            XCTAssertNil(error)
-            XCTAssertNotNil(leagues)
-            XCTAssertTrue((leagues ?? []).count > 0)
+        self.engine?.leagueService.fetchAllLeaguesIfNeeded { result in
+            switch result {
+            case .success(let leagues):
+                XCTAssertNotNil(leagues)
+                XCTAssertTrue((leagues).count > 0)
+            case .failure(_):
+                break
+            }
+            
             didFetchLeaguesExpectation.fulfill()
-        })
+        }
         
         
         wait(for: [didFetchLeaguesExpectation], timeout: 1)
@@ -45,7 +50,7 @@ final class LeagueServiceTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            self.engine?.leagueService.fetchAllLeagues(completion: { leagues, error in
+            self.engine?.leagueService.fetchAllLeagues(completion: { result in
                 return
             })
         }

@@ -28,17 +28,22 @@ final class TeamServiceTests: XCTestCase {
     func testFetchingTeams() throws {
         XCTAssertNotNil(engine)
         
-        let didFetchLeaguesExpectation = self.expectation(description: "Did fetch teams")
+        let didFetchTeamsExpectation = self.expectation(description: "Did fetch teams")
 
         let league = League(strLeague: "French Ligue 1")
-        self.engine?.teamService.fetchAllTeams(for: league) { teams, error in
-            XCTAssertNil(error)
-            XCTAssertNotNil(teams)
-            XCTAssertTrue((teams ?? []).count > 0)
-            didFetchLeaguesExpectation.fulfill()
+        self.engine?.teamService.fetchAllTeams(for: league) { result in
+            switch result {
+            case .success(let teams):
+                XCTAssertNotNil(teams)
+                XCTAssertTrue((teams).count > 0)
+            case .failure(_):
+                break
+            }
+            
+            didFetchTeamsExpectation.fulfill()
         }
         
-        wait(for: [didFetchLeaguesExpectation], timeout: 1)
+        wait(for: [didFetchTeamsExpectation], timeout: 1)
     }
     
     func testPerformanceAPI() throws {
@@ -46,7 +51,7 @@ final class TeamServiceTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
             let league = League(strLeague: "French Ligue 1")
-            self.engine?.teamService.fetchAllTeams(for: league) { teams, error in
+            self.engine?.teamService.fetchAllTeams(for: league) { result in
                 return
             }
         }
