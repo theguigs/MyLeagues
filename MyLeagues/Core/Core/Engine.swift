@@ -7,13 +7,13 @@
 
 import Foundation
 
-class Engine {
+public class Engine {
     private let networkClient: NetworkClient
 
-    var leagueService: LeagueService
-    var teamService: TeamService
+    public var leagueService: LeagueService
+    public var teamService: TeamService
 
-    init(
+    public init(
         configuration: EngineConfiguration
     ) {
         self.networkClient = NetworkClient(configuration: configuration)

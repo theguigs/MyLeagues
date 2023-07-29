@@ -10,7 +10,6 @@
 		D416AC312A731BD100372D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC302A731BD100372D7E /* AppDelegate.swift */; };
 		D416AC3A2A731BD200372D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D416AC392A731BD200372D7E /* Assets.xcassets */; };
 		D416AC3D2A731BD200372D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D416AC3B2A731BD200372D7E /* LaunchScreen.storyboard */; };
-		D416AC482A731BD200372D7E /* MyLeaguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC472A731BD200372D7E /* MyLeaguesTests.swift */; };
 		D416AC862A73213A00372D7E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC802A73213900372D7E /* NetworkClient.swift */; };
 		D416AC872A73213A00372D7E /* AsyncCacheHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC822A73213900372D7E /* AsyncCacheHandling.swift */; };
 		D416AC882A73213A00372D7E /* ExpirableFileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AC832A73213900372D7E /* ExpirableFileDataStore.swift */; };
@@ -51,6 +50,9 @@
 		D416ACF62A73FEC600372D7E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */; };
 		D416ACF82A73FF0700372D7E /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACF72A73FF0700372D7E /* StyleSheet.swift */; };
 		D416ACFB2A73FF9200372D7E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACFA2A73FF9200372D7E /* Colors.swift */; };
+		D416ACFF2A752A1C00372D7E /* LeagueServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416ACFE2A752A1C00372D7E /* LeagueServiceTests.swift */; };
+		D416AD012A758E4500372D7E /* TeamServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AD002A758E4500372D7E /* TeamServiceTests.swift */; };
+		D416AD052A75962000372D7E /* LeagueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416AD042A75962000372D7E /* LeagueViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,6 @@
 		D416AC3C2A731BD200372D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D416AC3E2A731BD200372D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D416AC432A731BD200372D7E /* MyLeaguesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLeaguesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D416AC472A731BD200372D7E /* MyLeaguesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLeaguesTests.swift; sourceTree = "<group>"; };
 		D416AC802A73213900372D7E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D416AC822A73213900372D7E /* AsyncCacheHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncCacheHandling.swift; sourceTree = "<group>"; };
 		D416AC832A73213900372D7E /* ExpirableFileDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirableFileDataStore.swift; sourceTree = "<group>"; };
@@ -109,6 +110,9 @@
 		D416ACF52A73FEC600372D7E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D416ACF72A73FF0700372D7E /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		D416ACFA2A73FF9200372D7E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D416ACFE2A752A1C00372D7E /* LeagueServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueServiceTests.swift; sourceTree = "<group>"; };
+		D416AD002A758E4500372D7E /* TeamServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamServiceTests.swift; sourceTree = "<group>"; };
+		D416AD042A75962000372D7E /* LeagueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +170,9 @@
 		D416AC462A731BD200372D7E /* MyLeaguesTests */ = {
 			isa = PBXGroup;
 			children = (
-				D416AC472A731BD200372D7E /* MyLeaguesTests.swift */,
+				D416ACFE2A752A1C00372D7E /* LeagueServiceTests.swift */,
+				D416AD002A758E4500372D7E /* TeamServiceTests.swift */,
+				D416AD042A75962000372D7E /* LeagueViewModelTests.swift */,
 			);
 			path = MyLeaguesTests;
 			sourceTree = "<group>";
@@ -552,7 +558,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D416AC482A731BD200372D7E /* MyLeaguesTests.swift in Sources */,
+				D416ACFF2A752A1C00372D7E /* LeagueServiceTests.swift in Sources */,
+				D416AD012A758E4500372D7E /* TeamServiceTests.swift in Sources */,
+				D416AD052A75962000372D7E /* LeagueViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

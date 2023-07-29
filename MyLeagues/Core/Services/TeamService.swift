@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TeamService: AsyncCacheHandling {
+public class TeamService: AsyncCacheHandling {
     
     let networkClient: NetworkClient
     let fileDataStore: FileDataStore
@@ -25,7 +25,10 @@ class TeamService: AsyncCacheHandling {
     /// - Returns:
     ///     - completion: Give a callback to handle WS response
     ///                Return tuple of 2 params ([Team] & Error) both optionals
-    public func fetchAllTeams(for league: League, completion: @escaping ([Team]?, APIError?) -> Void) {
+    public func fetchAllTeams(
+        for league: League,
+        completion: @escaping ([Team]?, APIError?) -> Void
+    ) {
         let dict = [
             "l": league.strLeague
         ]

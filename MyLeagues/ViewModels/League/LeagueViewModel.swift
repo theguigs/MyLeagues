@@ -7,12 +7,12 @@
 
 import Foundation
 
-class LeagueViewModel {
+public class LeagueViewModel {
     let engine: Engine
     
     var teams: [Team] = []
     
-    init(engine: Engine) {
+    public init(engine: Engine) {
         self.engine = engine
     }
     
@@ -32,12 +32,12 @@ class LeagueViewModel {
         }
     }
     
-    private func sortTeamsByAntiAlphabeticalOrder(_ teams: [Team]?) -> [Team] {
+    public func sortTeamsByAntiAlphabeticalOrder(_ teams: [Team]?) -> [Team] {
         guard let teams else { return [] }
         return teams.sorted { $0.strTeam > $1.strTeam }
     }
 
-    private func removeUnevenTeams(_ teams: [Team]?) -> [Team] {
+    public func removeUnevenTeams(_ teams: [Team]?) -> [Team] {
         guard let teams else { return [] }
         return teams
             .enumerated()

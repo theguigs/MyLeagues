@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LeagueService: AsyncExpirableCacheHandling {
+public class LeagueService: AsyncExpirableCacheHandling {
     static let leaguesFilename = "LeagueService.leagues"
 
     let networkClient: NetworkClient
@@ -51,7 +51,9 @@ class LeagueService: AsyncExpirableCacheHandling {
     /// - Returns:
     ///     - completion: Give a callback to handle WS response
     ///                Return tuple of 2 params ([League] & Error) both optionals
-    private func fetchAllLeagues(completion: @escaping ([League]?, APIError?) -> Void) {
+    public func fetchAllLeagues(completion: @escaping ([League]?, APIError?) -> Void) {
+        ILOG("[LeagueService] Fetching all leagues")
+        
         networkClient.call(
             endpoint: LeagueEndpoints.allLeagues
         ) { [weak self] result in
@@ -78,6 +80,8 @@ class LeagueService: AsyncExpirableCacheHandling {
     }
     
     private func persistLeagues(_ leagues: [League]) {
+        ILOG("[LeagueService] Persisting leagues")
+        
         persistAsync(
             object: leagues,
             filename: Self.leaguesFilename,
