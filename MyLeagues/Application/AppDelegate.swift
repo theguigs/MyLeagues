@@ -7,10 +7,6 @@
 
 import UIKit
 
-// TODO :
-// - Unit Tests
-// - Manage error into service
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

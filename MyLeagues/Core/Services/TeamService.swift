@@ -24,10 +24,10 @@ public class TeamService: AsyncCacheHandling {
     ///
     /// - Returns:
     ///     - completion: Give a callback to handle WS response
-    ///                Return tuple of 2 params ([Team] & Error) both optionals
+    ///                Return Result type with needed data or error
     public func fetchAllTeams(
         for league: League,
-        completion: @escaping ([Team]?, APIError?) -> Void
+        completion: @escaping (Result<[Team], APIError>) -> Void
     ) {
         let dict = [
             "l": league.strLeague
@@ -39,19 +39,19 @@ public class TeamService: AsyncCacheHandling {
             parameterEncoding: .URL
         ) { result in
             switch result {
-                case .success((let data, _)):
-                    do {
-                        let teamsResponse = try JSONDecoder.snakeDecoder.decode(TeamsResponse.self, from: data)
-                        completion(teamsResponse.teams, nil)
-                    } catch let error {
-                        ELOG("[LeagueService] fetchAllLeagues error : \(error)")
-                        let apiError = APIError.unexpectedAPIResponse
-                        completion(nil, apiError)
-                    }
-                case .failure(let error):
+            case .success((let data, _)):
+                do {
+                    let teamsResponse = try JSONDecoder.snakeDecoder.decode(TeamsResponse.self, from: data)
+                    completion(.success(teamsResponse.teams))
+                } catch let error {
                     ELOG("[LeagueService] fetchAllLeagues error : \(error)")
-                    let apiError = APIError.requestFailure
-                    completion(nil, apiError)
+                    let apiError = APIError.unexpectedAPIResponse
+                    completion(.failure(apiError))
+                }
+            case .failure(let error):
+                ELOG("[LeagueService] fetchAllLeagues error : \(error)")
+                let apiError = APIError.requestFailure
+                completion(.failure(apiError))
             }
         }
     }

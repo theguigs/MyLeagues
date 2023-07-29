@@ -17,18 +17,20 @@ public class LeagueViewModel {
     }
     
     func fetchAllTeams(for league: League, completion: @escaping () -> Void) {
-        engine.teamService.fetchAllTeams(for: league) { [weak self] teams, error in
+        engine.teamService.fetchAllTeams(for: league) { [weak self] result in
             guard let self else { return }
-            guard error == nil else {
+            
+            switch result {
+            case .success(let teams):
+                let sortedTeams = sortTeamsByAntiAlphabeticalOrder(teams)
+                let computedTeams = removeUnevenTeams(sortedTeams)
+                self.teams = computedTeams
+                
+                completion()
+            case .failure(let error):
                 // Manage error
                 return
             }
-            
-            let sortedTeams = sortTeamsByAntiAlphabeticalOrder(teams)
-            let computedTeams = removeUnevenTeams(sortedTeams)
-            self.teams = computedTeams
-            
-            completion()
         }
     }
     

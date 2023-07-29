@@ -20,17 +20,19 @@ class LeagueSearchViewModel {
     }
     
     func fetchAllLeagues(completion: @escaping () -> Void) {
-        engine.leagueService.fetchAllLeaguesIfNeeded { [weak self] leagues, error in
+        engine.leagueService.fetchAllLeaguesIfNeeded { [weak self] result in
             guard let self else { return }
-            guard error == nil else {
+            
+            switch result {
+            case .success(let leagues):
+                self.leagues = leagues
+                self.filteredLeagues = leagues
+                
+                completion()
+            case .failure(let error):
                 // Manage error
                 return
             }
-            
-            self.leagues = leagues ?? []
-            self.filteredLeagues = leagues ?? []
-            
-            completion()
         }
     }
     

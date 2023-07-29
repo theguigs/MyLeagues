@@ -25,8 +25,8 @@ public class LeagueService: AsyncExpirableCacheHandling {
     ///
     /// - Returns:
     ///     - completion: Give a callback to handle WS response
-    ///                Return tuple of 2 params ([League] & Error) both optionals
-    public func fetchAllLeaguesIfNeeded(completion: @escaping ([League]?, APIError?) -> Void) {
+    ///                Return Result type with needed data or error
+    public func fetchAllLeaguesIfNeeded(completion: @escaping (Result<[League], APIError>) -> Void) {
         readFromCacheAsync(
             filename: Self.leaguesFilename,
             directory: expirableDataStore.dataStore.rootDirectory(),
@@ -39,7 +39,7 @@ public class LeagueService: AsyncExpirableCacheHandling {
             }
             
             ILOG("[LeagueService] leagues read from cache")
-            completion(leagues, nil)
+            completion(.success(leagues))
         }
     }
     
@@ -50,8 +50,8 @@ public class LeagueService: AsyncExpirableCacheHandling {
     ///
     /// - Returns:
     ///     - completion: Give a callback to handle WS response
-    ///                Return tuple of 2 params ([League] & Error) both optionals
-    public func fetchAllLeagues(completion: @escaping ([League]?, APIError?) -> Void) {
+    ///                Return Result type with needed data or error
+    public func fetchAllLeagues(completion: @escaping (Result<[League], APIError>) -> Void) {
         ILOG("[LeagueService] Fetching all leagues")
         
         networkClient.call(
@@ -60,21 +60,21 @@ public class LeagueService: AsyncExpirableCacheHandling {
             guard let self else { return }
             
             switch result {
-                case .success((let data, _)):
-                    do {
-                        let allLeaguesResponse = try JSONDecoder.snakeDecoder.decode(AllLeaguesResponse.self, from: data)
-                        self.persistLeagues(allLeaguesResponse.leagues)
-                        
-                        completion(allLeaguesResponse.leagues, nil)
-                    } catch let error {
-                        ELOG("[LeagueService] fetchAllLeagues error : \(error)")
-                        let apiError = APIError.unexpectedAPIResponse
-                        completion(nil, apiError)
-                    }
-                case .failure(let error):
+            case .success((let data, _)):
+                do {
+                    let allLeaguesResponse = try JSONDecoder.snakeDecoder.decode(AllLeaguesResponse.self, from: data)
+                    self.persistLeagues(allLeaguesResponse.leagues)
+                    
+                    completion(.success(allLeaguesResponse.leagues))
+                } catch let error {
                     ELOG("[LeagueService] fetchAllLeagues error : \(error)")
-                    let apiError = APIError.requestFailure
-                    completion(nil, apiError)
+                    let apiError = APIError.unexpectedAPIResponse
+                    completion(.failure(apiError))
+                }
+            case .failure(let error):
+                ELOG("[LeagueService] fetchAllLeagues error : \(error)")
+                let apiError = APIError.requestFailure
+                completion(.failure(apiError))
             }
         }
     }
